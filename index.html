@@ -33,6 +33,8 @@
 		    var houseVal = document.forms[0].housetype[i].value;
 	    }
     }
+	
+	out.value = -6932000 + 221400 * Math.log(sqftVal) + 637.2 * Math.exp(bathsVal) + 2868 * builtVal + 159100 * lotVal
     
   }
   
@@ -106,7 +108,7 @@
       </div>
     </fieldset>
     
-    <input type = "submit" value = "Predict My Home's Value">
+    <button onclick="getPrice()">Predict My Home's Value</button>
     
   </form>
 
