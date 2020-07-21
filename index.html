@@ -6,7 +6,36 @@
 
 </style>
 <script type="text/javascript">
-
+  
+  function getPrice() {
+    var form = document.getElementById("calc");
+    var out = form.elements["z"];
+    //get numbers
+    var sqftVal = parseInt(form.elements["sqft"].value);
+    var bathsVal = parseInt(form.elements["baths"].value);
+    var builtVal = parseInt(form.elements["built"].value);
+    var lotVal = parseInt(form.elements["lot"].value);
+    
+    for (i=0;i<document.forms[0].zipcode.length;i++) {
+	    if (document.forms[0].zipcode[i].checked) {
+		    var zipVal = document.forms[0].radios[i].value;
+	    }
+    }
+    
+    for (i=0;i<document.forms[0].zipcode.length;i++) {
+	    if (document.forms[0].gar[i].checked) {
+		    var garageVal = document.forms[0].gar[i].value;
+	    }
+    }
+    
+    for (i=0;i<document.forms[0].zipcode.length;i++) {
+	    if (document.forms[0].housetype[i].checked) {
+		    var houseVal = document.forms[0].housetype[i].value;
+	    }
+    }
+    
+  }
+  
 </script>
 </head>
 <body>
