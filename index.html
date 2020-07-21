@@ -19,17 +19,17 @@
     
     for (i=0;i<document.forms[0].zipcode.length;i++) {
 	    if (document.forms[0].zipcode[i].checked) {
-		    var zipVal = document.forms[0].radios[i].value;
+		    var zipVal = document.forms[0].zipcode[i].value;
 	    }
     }
     
-    for (i=0;i<document.forms[0].zipcode.length;i++) {
+    for (i=0;i<document.forms[0].gar.length;i++) {
 	    if (document.forms[0].gar[i].checked) {
 		    var garageVal = document.forms[0].gar[i].value;
 	    }
     }
     
-    for (i=0;i<document.forms[0].zipcode.length;i++) {
+    for (i=0;i<document.forms[0].housetype.length;i++) {
 	    if (document.forms[0].housetype[i].checked) {
 		    var houseVal = document.forms[0].housetype[i].value;
 	    }
@@ -109,7 +109,8 @@
         <label for="d">3</label>
       </div>
     </fieldset>
-    
+	  
+    <input name="z" />
     <button type="button" onclick="getPrice()">Predict My Home's Value</button>
 	// <button onclick="getPrice">Predict My Home's Value</button>
     
