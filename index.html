@@ -8,6 +8,7 @@
 <script type="text/javascript">
   
   function getPrice() {
+	event.preventDefault()
     var form = document.getElementById("calc");
     var out = form.elements["z"];
     //get numbers
@@ -108,7 +109,7 @@
       </div>
     </fieldset>
     
-    <button onclick="getPrice()">Predict My Home's Value</button>
+    <button onclick="getPrice(event)">Predict My Home's Value</button>
     
   </form>
 
