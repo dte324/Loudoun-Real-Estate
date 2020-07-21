@@ -35,8 +35,8 @@
 	    }
     }
 	
-	out = -6932000 + 221400 * Math.log(sqftVal) + 637.2 * Math.exp(bathsVal) + 2868 * builtVal + 159100 * lotVal;
-	document.getElementById("demo").innerHTML = out;
+	return out = -6932000 + 221400 * Math.log(sqftVal) + 637.2 * Math.exp(bathsVal) + 2868 * builtVal + 159100 * lotVal;
+	//document.getElementById("demo").innerHTML = out;
     
   }
   
@@ -110,8 +110,8 @@
       </div>
     </fieldset>
     
-    //<button onclick="getPrice(event)">Predict My Home's Value</button>
-	<button onclick="getPrice">Predict My Home's Value</button>
+    <button type="button" onclick="getPrice()">Predict My Home's Value</button>
+	// <button onclick="getPrice">Predict My Home's Value</button>
     
   </form>
 
