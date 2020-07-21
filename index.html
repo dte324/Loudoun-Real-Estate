@@ -12,20 +12,29 @@
 <body>
   
   <form id = "calc" oninput="updateOutput()">
+    
     <fieldset>
-    Ashburn ZIP Code:
-    <input type="radio" name="zipcode"
-    value="20147" checked> 20147
-    <input type="radio" name="zipcode"
-    value="20148"> 20148
+      <legend>Ashburn ZIP Code</legend>
+      <div>
+        <input type="radio" id="47" name="interest" value="47">
+        <label for="47">20147</label>
+      </div>
+      <div>
+        <input type="radio" id="47" name="interest" value="47">
+        <label for="47">20148</label>
+      </div>
     </fieldset>
     
     <fieldset>
-    House Type:
-    <input type="radio" name="sf"
-    value="sf" checked> Single Family
-    <input type="radio" name="tw"
-    value="tw"> Townhouse/Condo
+      <legend>House Type</legend>
+      <div>
+        <input type="radio" id="sf" name="interest" value="sf">
+        <label for="sf">Single Family</label>
+      </div>
+      <div>
+        <input type="radio" id="tw" name="interest" value="tw">
+        <label for="tw">Townhouse/Condo</label>
+      </div>
     </fieldset>
     
     <label for = "sqft">Square Feet:
