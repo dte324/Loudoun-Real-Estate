@@ -34,6 +34,11 @@
 		    var houseVal = document.forms[0].housetype[i].value;
 	    }
     }
+	  
+	zipVal = parseInt(form.elements["47"].value);
+	garageVal = parseInt(form.elements["sf"].value);
+	houseVal = parseInt(form.elements["gar"].value);
+	
 	
 	return out = -6932000 + 221400 * Math.log(sqftVal) + 637.2 * Math.exp(bathsVal) + 2868 * builtVal + 159100 * lotVal;
 	//document.getElementById("demo").innerHTML = out;
@@ -65,7 +70,7 @@
         <label for="sf">Single Family</label>
       </div>
       <div>
-        <input type="radio" id="tw" name="housetype" value="tw">
+        <input type="radio" id="sf" name="housetype" value="tw">
         <label for="tw">Townhouse/Condo</label>
       </div>
     </fieldset>
@@ -93,24 +98,29 @@
     <fieldset>
       <legend>Number of Garages</legend>
       <div>
-        <input type="radio" id="a" name="gar" value="a">
+        <input type="radio" id="gar" name="gar" value="a">
         <label for="a">0</label>
       </div>
       <div>
-        <input type="radio" id="b" name="gar" value="b">
+        <input type="radio" id="gar" name="gar" value="b">
         <label for="b">1</label>
       </div>
       <div>
-        <input type="radio" id="c" name="gar" value="c">
+        <input type="radio" id="gar" name="gar" value="c">
         <label for="c">2</label>
       </div>
       <div>
-        <input type="radio" id="d" name="gar" value="d">
+        <input type="radio" id="gar" name="gar" value="d">
         <label for="d">3</label>
       </div>
     </fieldset>
 	  
-    <input name="z" />
+    <!-- Add this element -->
+      <fieldset>
+        <legend>Predicted value</legend>
+        <input name="z" />
+      </fieldset>
+	  
     <button type="button" onclick="getPrice()">Predict My Home's Value</button>
 	// <button onclick="getPrice">Predict My Home's Value</button>
     
