@@ -31,7 +31,7 @@
 
         for (i = 0; i < document.forms[0].housetype.length; i++) {
           if (document.forms[0].housetype[i].checked) {
-            var houseVal = parseInt(document.forms[0].housetype[i].value);
+            var houseVal = document.forms[0].housetype[i].value;
           }
         }
 		  
