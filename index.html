@@ -38,55 +38,61 @@
 		if (zipVal == "47") {
 			if (garageVal == "2") {
 				if (houseVal == "sf") {
+					out.value = 1; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						51640 +
 						2868 * builtVal +
-						159100 * lotVal;
+						159100 * lotVal; */
 				}
 				else { //townhouse
+					out.value = 2; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						51640 -
 						65850 +
 						2868 * builtVal +
-						159100 * lotVal;
+						159100 * lotVal; */
 				}
 			}
 			else { //garage == 3
 				if (houseVal == "sf") {
+					out.value = 3; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						139600 +
 						2868 * builtVal +
-						159100 * lotVal;
+						159100 * lotVal; */
 				}
 				else { //townhouse
+					out.value = 4; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						139600 -
 						65850 +
 						2868 * builtVal +
-						159100 * lotVal;
+						159100 * lotVal; */
 				}
 			}
 		}
 		else { //zip == 20148
 			if (garageVal == "2") {
 				if (houseVal == "sf") {
+					out.value = 5; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						51640 +
 						2868 * builtVal +
 						159100 * lotVal -
-						27070;
+						27070; */
 				}
 				else { //townhouse
+					out.value = 6; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
@@ -94,20 +100,22 @@
 						65850 +
 						2868 * builtVal +
 						159100 * lotVal -
-						27070;
+						27070; */
 				}
 			}
 			else { //garage == 3
 				if (houseVal == "sf") {
+					out.value = 7; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						139600 +
 						2868 * builtVal +
 						159100 * lotVal -
-						27070;
+						27070; */
 				}
 				else { //townhouse
+					out.value = 8; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
@@ -115,7 +123,7 @@
 						65850 +
 						2868 * builtVal +
 						159100 * lotVal -
-						27070;
+						27070; */
 				}
 			}
 		}
@@ -136,12 +144,12 @@
       <fieldset>
         <legend>ZIP Code</legend>
         <div>
-          <input type="radio" id="47" name="zipcode" value="47" />
+          <input type="radio" id="48" name="zipcode" value="47" />
           <label for="47">20147</label>
         </div>
         <div>
-          <input type="radio" id="47" name="zipcode" value="48" />
-          <label for="47">20148</label>
+          <input type="radio" id="48" name="zipcode" value="48" />
+          <label for="48">20148</label>
         </div>
       </fieldset>
 
@@ -194,19 +202,19 @@
       <fieldset>
         <legend>Number of Garages</legend>
         <div>
-          <input type="radio" id="a" name="gar" value="0" />
+          <input type="radio" id="0" name="gar" value="0" />
           <label for="a">0</label>
         </div>
         <div>
-          <input type="radio" id="b" name="gar" value="1" />
+          <input type="radio" id="1" name="gar" value="1" />
           <label for="b">1</label>
         </div>
         <div>
-          <input type="radio" id="c" name="gar" value="2" />
+          <input type="radio" id="2" name="gar" value="2" />
           <label for="c">2</label>
         </div>
         <div>
-          <input type="radio" id="d" name="gar" value="3" />
+          <input type="radio" id="3" name="gar" value="3" />
           <label for="d">3</label>
         </div>
       </fieldset>
