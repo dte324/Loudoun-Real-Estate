@@ -38,80 +38,72 @@
 		if (zipVal == "47") {
 			if (garageVal == "2") {
 				if (houseVal == "sf") {
-					out.value = 1; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						51640 +
 						2868 * builtVal +
-						159100 * lotVal; */
+						159100 * lotVal; 
 				}
 				else { //townhouse
-					out.value = houseVal; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						51640 -
 						65850 +
 						2868 * builtVal +
-						159100 * lotVal; */
+						159100 * lotVal; 
 				}
 			}
 			else if (garageVal == "3") { //garage == 3
 				if (houseVal == "sf") {
-					out.value = 3; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						139600 +
 						2868 * builtVal +
-						159100 * lotVal; */
+						159100 * lotVal; 
 				}
 				else { //townhouse
-					out.value = 4; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						139600 -
 						65850 +
 						2868 * builtVal +
-						159100 * lotVal; */
+						159100 * lotVal; 
 				}
 			}
 			else {
 				if (houseVal == "sf") {
-					out.value = 10; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						2868 * builtVal +
-						159100 * lotVal; */
+						159100 * lotVal; 
 				}
 				else { //townhouse
-					out.value = 11; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) -
 						65850 +
 						2868 * builtVal +
-						159100 * lotVal; */
+						159100 * lotVal; 
 				}
 			}
 		}
 		else { //zip == 20148
 			if (garageVal == "2") {
 				if (houseVal == "sf") {
-					out.value = 5; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						51640 +
 						2868 * builtVal +
 						159100 * lotVal -
-						27070; */
+						27070; 
 				}
 				else { //townhouse
-					out.value = 6; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
@@ -119,22 +111,20 @@
 						65850 +
 						2868 * builtVal +
 						159100 * lotVal -
-						27070; */
+						27070; 
 				}
 			}
 			else if (garageVal == "3") { //garage == 3
 				if (houseVal == "sf") {
-					out.value = 7; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						139600 +
 						2868 * builtVal +
 						159100 * lotVal -
-						27070; */
+						27070; 
 				}
 				else { //townhouse
-					out.value = 8; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
@@ -142,28 +132,26 @@
 						65850 +
 						2868 * builtVal +
 						159100 * lotVal -
-						27070; */
+						27070; 
 				}
 			}
 			else {
 				if (houseVal == "sf") {
-					out.value = 20; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						2868 * builtVal +
 						159100 * lotVal-
-						27070; */
+						27070; 
 				}
 				else { //townhouse
-					out.value = 21; /*
 					out.value = -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) -
 						65850 +
 						2868 * builtVal +
 						159100 * lotVal-
-						27070; */
+						27070; 
 				}
 			}
 		}
