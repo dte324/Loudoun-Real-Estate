@@ -7,124 +7,134 @@
 </style>
 <script type="text/javascript">
   
-  function getPrice() {
-	//event.preventDefault()
-    var form = document.getElementById("calc");
-    var out = form.elements["z"];
-    //get numbers
-    var sqftVal = parseInt(form.elements["sqft"].value);
-    var bathsVal = parseInt(form.elements["baths"].value);
-    var builtVal = parseInt(form.elements["built"].value);
-    var lotVal = parseInt(form.elements["lot"].value);
-    
-    for (i=0;i<document.forms[0].zipcode.length;i++) {
-	    if (document.forms[0].zipcode[i].checked) {
-		    var zipVal = document.forms[0].zipcode[i].value;
-	    }
-    }
-    
-    for (i=0;i<document.forms[0].gar.length;i++) {
-	    if (document.forms[0].gar[i].checked) {
-		    var garageVal = document.forms[0].gar[i].value;
-	    }
-    }
-    
-    for (i=0;i<document.forms[0].housetype.length;i++) {
-	    if (document.forms[0].housetype[i].checked) {
-		    var houseVal = document.forms[0].housetype[i].value;
-	    }
-    }
+  <script type="text/javascript">
+      function getPrice() {
+        var form = document.getElementById("calc");
+        var out = form.elements["z"];
+        //get numbers
+        var sqftVal = parseInt(form.elements["sqft"].value);
+        var bathsVal = parseInt(form.elements["baths"].value);
+        var builtVal = parseInt(form.elements["built"].value);
+        var lotVal = parseInt(form.elements["lot"].value);
+
+        for (i = 0; i < document.forms[0].zipcode.length; i++) {
+          if (document.forms[0].zipcode[i].checked) {
+            var zipVal = parseInt(document.forms[0].zipcode[i].value);
+          }
+        }
+
+        for (i = 0; i < document.forms[0].zipcode.length; i++) {
+          if (document.forms[0].gar[i].checked) {
+            var garageVal = parseInt(document.forms[0].gar[i].value);
+          }
+        }
+
+        for (i = 0; i < document.forms[0].zipcode.length; i++) {
+          if (document.forms[0].housetype[i].checked) {
+            var houseVal = parseInt(document.forms[0].housetype[i].value);
+          }
+        }
 	  
-	zipVal = parseInt(form.elements["47"].value);
-	garageVal = parseInt(form.elements["sf"].value);
-	houseVal = parseInt(form.elements["gar"].value);
-	
-	
-	return out = -6932000 + 221400 * Math.log(sqftVal) + 637.2 * Math.exp(bathsVal) + 2868 * builtVal + 159100 * lotVal;
-	//document.getElementById("demo").innerHTML = out;
-    
-  }
-  
-</script>
-</head>
-<body>
-  
-  <form id = "calc" oninput="updateOutput()">
-    
-    <fieldset>
-      <legend>Ashburn ZIP Code</legend>
-      <div>
-        <input type="radio" id="47" name="zipcode" value="47">
-        <label for="47">20147</label>
-      </div>
-      <div>
-        <input type="radio" id="47" name="zipcode" value="47">
-        <label for="47">20148</label>
-      </div>
-    </fieldset>
-    
-    <fieldset>
-      <legend>House Type</legend>
-      <div>
-        <input type="radio" id="sf" name="housetype" value="sf">
-        <label for="sf">Single Family</label>
-      </div>
-      <div>
-        <input type="radio" id="sf" name="housetype" value="tw">
-        <label for="tw">Townhouse/Condo</label>
-      </div>
-    </fieldset>
-    
-    <fieldset>
-      <legend>Square Feet</legend>
-      <input name = "sqft" id="sqft" type = "number" min = "0" max = "8000">
-    </fieldset>
-    
-    <fieldset>
-      <legend>Number of Bathrooms</legend>
-      <input name = "baths" id="baths" type = "number" step = "0.5" min = "0.5" max = "6.5">
-    </fieldset>
-    
-    <fieldset>
-      <legend>Year Built</legend>
-      <input name = "built" id="built" type = "number" min = "1988" max = "2020">
-    </fieldset>
-    
-    <fieldset>
-      <legend>Lot Size (in Acres)</legend>
-      <input name = "lot" id = "lot" type = "number" step = "0.01" min = "0" max = "1.54">
-    </fieldset>
-    
-    <fieldset>
-      <legend>Number of Garages</legend>
-      <div>
-        <input type="radio" id="gar" name="gar" value="a">
-        <label for="a">0</label>
-      </div>
-      <div>
-        <input type="radio" id="gar" name="gar" value="b">
-        <label for="b">1</label>
-      </div>
-      <div>
-        <input type="radio" id="gar" name="gar" value="c">
-        <label for="c">2</label>
-      </div>
-      <div>
-        <input type="radio" id="gar" name="gar" value="d">
-        <label for="d">3</label>
-      </div>
-    </fieldset>
-	  
-    <!-- Add this element -->
+
+
+        out.value =
+          -6932000 +
+          221400 * Math.log(sqftVal) +
+          637.2 * Math.exp(bathsVal) +
+          2868 * builtVal +
+          159100 * lotVal;
+      }
+    </script>
+  </head>
+
+  <body>
+    <form id="calc">
+      <fieldset>
+        <legend>ZIP Code</legend>
+        <div>
+          <input type="radio" id="47" name="zipcode" value="47" />
+          <label for="47">12345</label>
+        </div>
+        <div>
+          <input type="radio" id="47" name="zipcode" value="47" />
+          <label for="47">12346</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>House Type</legend>
+        <div>
+          <input type="radio" id="sf" name="housetype" value="sf" />
+          <label for="sf">Single Family</label>
+        </div>
+        <div>
+          <input type="radio" id="tw" name="housetype" value="tw" />
+          <label for="tw">Townhouse/Condo</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Square Feet</legend>
+        <input name="sqft" id="sqft" type="number" min="0" max="8000" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Number of Bathrooms</legend>
+        <input
+          name="baths"
+          id="baths"
+          type="number"
+          step="0.5"
+          min="0.5"
+          max="6.5"
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Year Built</legend>
+        <input name="built" id="built" type="number" min="1988" max="2020" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Lot Size (in Acres)</legend>
+        <input
+          name="lot"
+          id="lot"
+          type="number"
+          step="0.01"
+          min="0"
+          max="1.54"
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Number of Garages</legend>
+        <div>
+          <input type="radio" id="a" name="gar" value="a" />
+          <label for="a">0</label>
+        </div>
+        <div>
+          <input type="radio" id="b" name="gar" value="b" />
+          <label for="b">1</label>
+        </div>
+        <div>
+          <input type="radio" id="c" name="gar" value="c" />
+          <label for="c">2</label>
+        </div>
+        <div>
+          <input type="radio" id="d" name="gar" value="d" />
+          <label for="d">3</label>
+        </div>
+      </fieldset>
+      <!-- Add this element -->
       <fieldset>
         <legend>Predicted value</legend>
         <input name="z" />
       </fieldset>
-	  
-    <button type="button" onclick="getPrice()">Predict My Home's Value</button>
-	// <button onclick="getPrice">Predict My Home's Value</button>
-    
-  </form>
 
-</body>
+      <button type="button" onclick="getPrice()">
+        Predict My Home's Value
+      </button>
+    </form>
+  </body>
 </html>
