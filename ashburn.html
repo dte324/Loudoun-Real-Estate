@@ -24,9 +24,9 @@
         var out = form.elements["z"];
         //get numbers
         var sqftVal = parseInt(form.elements["sqft"].value);
-        var bathsVal = parseInt(form.elements["baths"].value);
+        var bathsVal = parseFloat(form.elements["baths"].value);
         var builtVal = parseInt(form.elements["built"].value);
-        var lotVal = parseInt(form.elements["lot"].value);
+        var lotVal = parseFloat(form.elements["lot"].value);
         for (i = 0; i < document.forms[0].zipcode.length; i++) {
           if (document.forms[0].zipcode[i].checked) {
             var zipVal = parseInt(document.forms[0].zipcode[i].value);
@@ -46,7 +46,12 @@
 		if (zipVal == "47") {
 			if (garageVal == "2") {
 				if (houseVal == "sf") {
-					out.value = bathsVal;
+					out.value = -6932000 +
+						221400 * Math.log(sqftVal) +
+						637.2 * Math.exp(bathsVal) +
+						51640 +
+						2868 * builtVal +
+						159100 * lotVal; 
 				}
 				else { //townhouse
 					out.value = 2; /*
