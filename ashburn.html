@@ -47,8 +47,8 @@
 			if (garageVal == "2") {
 				if (houseVal == "sf") {
 					out.value = -6932000 +
-						/* 221400 * Math.log(sqftVal) + */
-						637.2 * Math.exp(bathsVal) +
+						221400 * Math.log(sqftVal) + /*
+						637.2 * Math.exp(bathsVal)*/ +
 						51640 +
 						2868 * builtVal +
 						159100 * lotVal; 
