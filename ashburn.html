@@ -46,13 +46,12 @@
 		if (zipVal == "47") {
 			if (garageVal == "2") {
 				if (houseVal == "sf") {
-					out.value = 1; /*
 					out.value = -6932000 +
-						221400 * Math.log(sqftVal) +
+						/* 221400 * Math.log(sqftVal) + */
 						637.2 * Math.exp(bathsVal) +
 						51640 +
 						2868 * builtVal +
-						159100 * lotVal;  */
+						159100 * lotVal; 
 				}
 				else { //townhouse
 					out.value = 2; /*
