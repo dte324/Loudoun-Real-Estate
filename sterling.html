@@ -41,15 +41,15 @@
           }
         }
 		  
-		if (zipVal == "47") {
+		if (zipVal == "64") {
 			if (garageVal == "2") {
 				if (houseVal == "sf") {
-					out.value = Math.round( -6932000 +
+					out.value = 1; /*Math.round( -6932000 +
 						221400 * Math.log(sqftVal) +
 						637.2 * Math.exp(bathsVal) +
 						51640 +
 						2868 * builtVal +
-						159100 * lotVal); 
+						159100 * lotVal); */
 				}
 				else { //townhouse
 					out.value = Math.round( -6932000 +
@@ -98,7 +98,7 @@
 				}
 			}
 		}
-		else { //zip == 20148
+		else { //zip == 20165
 			if (garageVal == "2") {
 				if (houseVal == "sf") {
 					out.value = Math.round( -6932000 +
@@ -213,12 +213,12 @@
 			      <fieldset>
 				<legend>ZIP Code</legend>
 				<div>
-				  <input type="radio" id="47" name="zipcode" value="47" checked="checked" />
-				  <label for="47">20147</label>
+				  <input type="radio" id="64" name="zipcode" value="64" checked="checked" />
+				  <label for="64">20164</label>
 				</div>
 				<div>
-				  <input type="radio" id="48" name="zipcode" value="48" />
-				  <label for="48">20148</label>
+				  <input type="radio" id="65" name="zipcode" value="65" />
+				  <label for="65">20165</label>
 				</div>
 			      </fieldset>
 				<p> </p>
