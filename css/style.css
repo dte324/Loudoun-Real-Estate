@@ -342,12 +342,15 @@ footer {
 }
 
 #featuresAshburn ul li.feature-1 {
+	width:100px;
 	background: url('../images/AV5.JPG') no-repeat top center;
 }
 #featuresAshburn ul li.feature-2 {
+	width:100px;
 	background: url('../images/AV25.JPG') no-repeat top center;
 }
 #featuresAshburn ul li.feature-3 {
+	width:100px;
 	background: url('../images/AV13.JPG') no-repeat top center;
 }
 
