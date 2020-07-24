@@ -327,7 +327,29 @@ footer {
 }
 */
 
+/*Features for Ashburn*/
 
+#featuresAshburn ul {
+	margin: 80px 0;
+}
+
+#featuresAshburn ul li {
+	width: 300px;
+	padding-top: 140px;
+	float: left;
+	margin-right: 10px;
+	text-align: center;
+}
+
+#featuresAshburn ul li.feature-1 {
+	background: url('../images/AV5.JPG') no-repeat top center;
+}
+#featuresAshburn ul li.feature-2 {
+	background: url('../images/AV25.JPG') no-repeat top center;
+}
+#featuresAshburn ul li.feature-3 {
+	background: url('../images/AV13.JPG') no-repeat top center;
+}
 
 
 
