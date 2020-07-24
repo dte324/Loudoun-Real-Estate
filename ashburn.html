@@ -193,8 +193,14 @@
 	  <div id="cta">
 		<div class="wrapper">
 			<!-- <h3>Heard Enough?</h3> -->
-			<form id="calc">
-      <fieldset>
+	<form id="calc">		
+	<table>
+	  <colgroup>
+	    <!-- <col span="2" style="background-color:#f8fafa"> -->
+	    <col style="background-color:#f8fafa">
+	  </colgroup>
+	  <tr>
+	    <th><fieldset>
         <legend>ZIP Code</legend>
         <div>
           <input type="radio" id="47" name="zipcode" value="47" />
@@ -215,8 +221,8 @@
           <input type="radio" id="tw" name="housetype" value="tw" />
           <label for="tw">Townhouse/Condo</label>
         </div>
-      </fieldset>
-      <fieldset>
+      </fieldset></th>
+	    <th><fieldset>
         <legend>Square Feet</legend>
         <input name="sqft" id="sqft" type="number" min="0" max="8000" />
       </fieldset>
@@ -245,8 +251,8 @@
           min="0"
           max="1.54"
         />
-      </fieldset>
-      <fieldset>
+      </fieldset></th>
+	    <th><fieldset>
         <legend>Number of Garages</legend>
         <div>
           <input type="radio" id="0" name="gar" value="0" />
@@ -264,7 +270,12 @@
           <input type="radio" id="3" name="gar" value="3" />
           <label for="d">3</label>
         </div>
-      </fieldset>
+      </fieldset></th>
+	  </tr>
+	</table>	
+			
+			
+
       <!-- Add this element -->
       <fieldset>
         <legend>Predicted value</legend>
