@@ -213,7 +213,7 @@
 			      <fieldset>
 				<legend>ZIP Code</legend>
 				<div>
-				  <input type="radio" id="47" name="zipcode" value="47" />
+				  <input type="radio" id="47" name="zipcode" value="47" checked="checked" />
 				  <label for="47">20147</label>
 				</div>
 				<div>
@@ -225,7 +225,7 @@
 			      <fieldset>
 				<legend>House Type</legend>
 				<div>
-				  <input type="radio" id="sf" name="housetype" value="sf" />
+				  <input type="radio" id="sf" name="housetype" value="sf" checked="checked" />
 				  <label for="sf">Single Family</label>
 				</div>
 				<div>
@@ -251,7 +251,7 @@
 
 			<fieldset>
 				<legend>Square Feet</legend>
-				<input name="sqft" id="sqft" type="number" min="0" max="8000" required />
+				<input name="sqft" id="sqft" type="number" min="0" max="8000" placeholder = "2500" required />
 			      </fieldset>
 			      <fieldset>
 				<legend>Number of Bathrooms</legend>
@@ -262,12 +262,13 @@
 				  step="0.5"
 				  min="0.5"
 				  max="6.5"
+				       placeholder = "3.5"
 				       required
 				/>
 			      </fieldset>
 			      <fieldset>
 				<legend>Year Built</legend>
-				<input name="built" id="built" type="number" min="1988" max="2020" required />
+				<input name="built" id="built" type="number" min="1988" max="2020" placeholder = "1988" required />
 			      </fieldset>
 			      <fieldset>
 				<legend>Lot Size (in Acres)</legend>
@@ -278,6 +279,7 @@
 				  step="0.01"
 				  min="0"
 				  max="1.54"
+				       placeholder = "0.11"
 				       required
 				/>
 			      </fieldset>
@@ -320,7 +322,7 @@
 			<fieldset>
 				<legend>Number of Garages</legend>
 				<div>
-				  <input type="radio" id="0" name="gar" value="0" />
+				  <input type="radio" id="0" name="gar" value="0" checked="checked" />
 				  <label for="a">0</label>
 				</div>
 				<div>
