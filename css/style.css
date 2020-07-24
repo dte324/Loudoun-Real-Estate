@@ -330,12 +330,12 @@ footer {
 /*Features for Ashburn*/
 
 #featuresAshburn ul {
-	margin: 50px 0;
+	margin: 5px 0;
 }
 
 #featuresAshburn ul li {
 	width: 300px;
-	padding-top: 200px;
+	padding-top: 5px;
 	float: left;
 	margin-right: 10px;
 	text-align: center;
