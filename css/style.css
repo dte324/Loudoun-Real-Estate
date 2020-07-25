@@ -444,3 +444,78 @@ footer {
 	color: #fff;
 }
 
+
+/*DOWNTOWN LEESBURG Image*/
+
+#leesburg-image {
+	height: 348px;
+	padding-top: 1px;
+	background: #e8eced url('../images/Downtown3.JPG') no-repeat center;
+}
+
+#leesburg-image h2 {
+	margin: 130px 0 40px 0;
+	color: white;
+}
+
+/* remove button
+.button-1 {
+	display: block;
+	text-align: center;
+	background: #444;
+	border-radius: 3px;
+	color: #fff;
+	width: 180px;
+	height: 50px;
+	font-size: 20px;
+	line-height: 50px;
+	margin: 0 auto;
+}
+
+.button-1:hover {
+	background-color: #02b8dd;
+	color: #fff;
+}
+*/
+
+/*Features for LEESBURG*/
+
+#featuresLeesburg ul {
+	margin: 5px 0;
+}
+
+#featuresLeesburg ul li {
+	width: 300px;
+	padding-top: 180px;
+	float: left;
+	margin-right: 10px;
+	text-align: center;
+}
+
+#featuresLeesburg ul li.feature-1 {
+	background: url('../images/Leesburg5_small.jpg') no-repeat top center;
+}
+#featuresLeesburg ul li.feature-2 {
+	background: url('../images/LTC12_small.jpg') no-repeat top center;
+}
+#featuresLeesburg ul li.feature-3 {
+	background: url('../images/Lans3_small.jpg') no-repeat top center;
+}
+
+.featuresLeesburgButton-1 {
+	display: block;
+	text-align: center;
+	background: #444;
+	border-radius: 3px;
+	color: #fff;
+	width: 180px;
+	height: 50px;
+	font-size: 20px;
+	line-height: 50px;
+	margin: 0 auto;
+}
+
+.featuresLeesburgButton-1:hover {
+	background-color: #02b8dd;
+	color: #fff;
+}
