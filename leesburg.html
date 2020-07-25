@@ -22,9 +22,6 @@
         var out = form.elements["z"];
         //get numbers
         var sqftVal = parseInt(form.elements["sqft"].value);
-        var bathsVal = parseFloat(form.elements["baths"].value);
-        var builtVal = parseInt(form.elements["built"].value);
-        var lotVal = parseFloat(form.elements["lot"].value);
         for (i = 0; i < document.forms[0].zipcode.length; i++) {
           if (document.forms[0].zipcode[i].checked) {
             var zipVal = parseInt(document.forms[0].zipcode[i].value);
@@ -38,6 +35,11 @@
         for (i = 0; i < document.forms[0].housetype.length; i++) {
           if (document.forms[0].housetype[i].checked) {
             var houseVal = document.forms[0].housetype[i].value;
+          }
+        }
+	for (i = 0; i < document.forms[0].beds.length; i++) {
+          if (document.forms[0].beds[i].checked) {
+            var bedsVal = document.forms[0].beds[i].value;
           }
         }
 		  
@@ -266,23 +268,26 @@
 				       required
 				/>
 			      </fieldset>
-			      <fieldset>
-				<legend>Year Built</legend>
-				<input name="built" id="built" type="number" min="1962" max="2006" value = "1998" required />
-			      </fieldset>
-			      <fieldset>
-				<legend>Lot Size (in Acres)</legend>
-				<input
-				  name="lot"
-				  id="lot"
-				  type="number"
-				  step="0.01"
-				  min="0"
-				  max="1.50"
-				       value = "0.11"
-				       required
-				/>
-			      </fieldset>
+			    <fieldset>
+				<legend>Number of Garages</legend>
+				<div>
+				  <input type="radio" id="0" name="gar" value="0" checked="checked" />
+				  <label for="a">0</label>
+				</div>
+				<div>
+				  <input type="radio" id="1" name="gar" value="1" />
+				  <label for="b">1</label>
+				</div>
+				<div>
+				  <input type="radio" id="2" name="gar" value="2" />
+				  <label for="c">2</label>
+				</div>
+				<div>
+				  <input type="radio" id="3" name="gar" value="3" />
+				  <label for="d">3</label>
+				</div>
+			      </fieldset>	
+			      
 			    
 			    <p> </p>
 			    <p> </p>
@@ -325,22 +330,30 @@
 			    <p> </p>
 			
 			<fieldset>
-				<legend>Number of Garages</legend>
+				<legend>Number of Bedrooms</legend>
 				<div>
-				  <input type="radio" id="0" name="gar" value="0" checked="checked" />
-				  <label for="a">0</label>
+				  <input type="radio" id="1" name="beds" value="1" checked="checked" />
+				  <label for="1">1</label>
 				</div>
 				<div>
-				  <input type="radio" id="1" name="gar" value="1" />
-				  <label for="b">1</label>
+				  <input type="radio" id="2" name="beds" value="2" />
+				  <label for="2">2</label>
 				</div>
 				<div>
-				  <input type="radio" id="2" name="gar" value="2" />
-				  <label for="c">2</label>
+				  <input type="radio" id="3" name="beds" value="3" />
+				  <label for="3">3</label>
 				</div>
 				<div>
-				  <input type="radio" id="3" name="gar" value="3" />
-				  <label for="d">3</label>
+				  <input type="radio" id="4" name="beds" value="4" />
+				  <label for="4">4</label>
+				</div>
+				<div>
+				  <input type="radio" id="5" name="beds" value="5" />
+				  <label for="5">5</label>
+				</div>
+				<div>
+				  <input type="radio" id="6" name="beds" value="6" />
+				  <label for="6">6</label>
 				</div>
 			      </fieldset>	
 			
