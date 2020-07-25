@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+ <html> 
+	  
+	 
+ <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <title>Sterling, Virginia</title>
+     <!--[if lt IE 9]>
+     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]--> 
+     <link rel="stylesheet" type="text/css" href="css/reset.css">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+ <!-- <h1>Eastern Loudoun Home Prices Calculator</h1> -->
+ <style type="text/css">
+</style>
+<!-- <title>Eastern Loudoun Home Prices Calculator</title> -->
+<meta charset="UTF-8" />
+<script type="text/javascript">
+      function getPrice() {
+        var form = document.getElementById("calc");
+        var out = form.elements["z"];
+        //get numbers
+        var sqftVal = parseInt(form.elements["sqft"].value);
+        var bathsVal = parseFloat(form.elements["baths"].value);
+        var builtVal = parseInt(form.elements["built"].value);
+        var lotVal = parseFloat(form.elements["lot"].value);
+        for (i = 0; i < document.forms[0].zipcode.length; i++) {
+          if (document.forms[0].zipcode[i].checked) {
+            var zipVal = parseInt(document.forms[0].zipcode[i].value);
+          }
+        }
+        for (i = 0; i < document.forms[0].gar.length; i++) {
+          if (document.forms[0].gar[i].checked) {
+            var garageVal = parseInt(document.forms[0].gar[i].value);
+          }
+        }
+        for (i = 0; i < document.forms[0].housetype.length; i++) {
+          if (document.forms[0].housetype[i].checked) {
+            var houseVal = document.forms[0].housetype[i].value;
+          }
+        }
+		  
+		if (zipVal == "64") {
+			if (garageVal == "2") {
+				if (houseVal == "sf") {
+					out.value = Math.round( -4240011.2 +
+						182462.8 * Math.log(sqftVal) +
+						36089.2 +
+						125498.3 * lotVal +
+						1656.6 * builtVal +
+						824.7 * Math.exp(bathsVal)); 
+				}
+				else { //townhouse
+					out.value = Math.round( -4240011.2 +
+						182462.8 * Math.log(sqftVal) +
+						36089.2 +
+						125498.3 * lotVal -
+						57941.0 +
+						1656.6 * builtVal +
+						824.7 * Math.exp(bathsVal)); 
+				}
+			}
+			else if (garageVal == "3") { //garage == 3
+				if (houseVal == "sf") {
+					out.value = Math.round( -4240011.2 +
+						182462.8 * Math.log(sqftVal) +
+						72732.5 +
+						125498.3 * lotVal +
+						1656.6 * builtVal +
+						824.7 * Math.exp(bathsVal)); 
+				}
+				else { //townhouse
+					out.value = Math.round( -4240011.2 +
+						182462.8 * Math.log(sqftVal) +
+						72732.5 +
+						125498.3 * lotVal -
+						57941.0 +
+						1656.6 * builtVal +
+						824.7 * Math.exp(bathsVal)); 
+				}
+			}
+			else { // 0-1 garages
+				if (houseVal == "sf") {
+					out.value = Math.round( -4240011.2 +
+						182462.8 * Math.log(sqftVal) +
+						125498.3 * lotVal +
+						1656.6 * builtVal +
+						824.7 * Math.exp(bathsVal)); 
+				}
+				else { //townhouse
+					out.value = Math.round( -4240011.2 +
+						182462.8 * Math.log(sqftVal) +
+						125498.3 * lotVal -
+						57941.0 +
+						1656.6 * builtVal +
+						824.7 * Math.exp(bathsVal)); 
+				}
+			}
+		}
+		else { //zip == 20165
+			if (garageVal == "2") {
+				if (houseVal == "sf") {
+					out.value = Math.round( -4240011.2 +
+						182462.8 * Math.log(sqftVal) +
+						36089.2 +
+						125498.3 * lotVal +
+						33878.4 +
+						1656.6 * builtVal +
+						824.7 * Math.exp(bathsVal)); 
+				}
+				else { //townhouse
+					out.value = Math.round( -4240011.2 +
+						182462.8 * Math.log(sqftVal) +
+						36089.2 +
+						125498.3 * lotVal +
+						33878.4 - 
+						57941.0 +
+						1656.6 * builtVal +
+						745.6 * Math.exp(bathsVal)); 
+				}
+			}
+			else if (garageVal == "3") { //garage == 3
+				if (houseVal == "sf") {
+					out.value = Math.round( -4240011.2 +
+						182462.8 * Math.log(sqftVal) +
+						72732.5 +
+						125498.3 * lotVal +
+						33878.4 +
+						1656.6 * builtVal +
+						824.7 * Math.exp(bathsVal)); 
+				}
+				else { //townhouse
+					out.value = Math.round( -4240011.2 +
+						182462.8 * Math.log(sqftVal) +
+						72732.5 +
+						125498.3 * lotVal +
+						33878.4 - 
+						57941.0 +
+						1656.6 * builtVal +
+						824.7 * Math.exp(bathsVal)); 
+				}
+			}
+			else { // 0-1 garage
+				if (houseVal == "sf") {
+					out.value = Math.round( -4240011.2 +
+						182462.8 * Math.log(sqftVal) +
+						125498.3 * lotVal +
+						33798.7 +
+						1656.6 * builtVal +
+						824.7 * Math.exp(bathsVal)); 
+				}
+				else { //townhouse
+					out.value = Math.round( -4240011.2 +
+						182462.8 * Math.log(sqftVal) +
+						125498.3 * lotVal + 
+						33878.4 -
+						57941.0 +
+						1656.6 * builtVal +
+						824.7 * Math.exp(bathsVal)); 
+				}
+			}
+		}
+		  
+      }
+    </script>
+  </head>
+  <body>
+	  
+	  
+	  <header>
+		<div class="wrapper">
+			 <h1>Loudoun Price Calculator<span class="color"></span></h1>
+			<nav>
+				<ul>
+					<li><a href="https://dte324.github.io/Loudoun-Real-Estate/index.html">Home</a></li>
+					<li><a href="https://dte324.github.io/Loudoun-Real-Estate/index.html">Home Value</a></li>
+					<li><a href="https://dte324.github.io/Loudoun-Real-Estate/about.html">About</a></li>
+					<li><a href="uploads/ReportBlank.pdf" target="_blank">Report</a></li>
+				</ul>
+			</nav>
+ 		</div>
+ 	</header>
+
+ 	<div id="dtc-image">
+ 		<div class="wrapper">
+ 			<h2><strong>Sterling, Virginia</strong></h2>
+ 			<!-- <a href="#homeValue" class="button-1">Get Started</a> -->
+ 		</div>
+ 	</div>
+
+	<div id="featuresSterling">
+		<h3>Find Out What Your Home is Worth</h3>
+		<font color = "#A52A2A"> <center> Note: For condominiums, be sure to input a lot size of 0. For townhomes, be sure to input the <br> appropriate lot size. Do not leave any question blank in order to receive an accurate prediction. </center> </font>
+	    <div class="wrapper">
+		<ul>
+		    <li class="feature-1">
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+
+			<form id="calc">
+
+			      <fieldset>
+				<legend>ZIP Code</legend>
+				<div>
+				  <input type="radio" id="64" name="zipcode" value="64" checked="checked" />
+				  <label for="64">20164</label>
+				</div>
+				<div>
+				  <input type="radio" id="65" name="zipcode" value="65" />
+				  <label for="65">20165</label>
+				</div>
+			      </fieldset>
+				<p> </p>
+			      <fieldset>
+				<legend>House Type</legend>
+				<div>
+				  <input type="radio" id="sf" name="housetype" value="sf" checked="checked" />
+				  <label for="sf">Single Family</label>
+				</div>
+				<div>
+				  <input type="radio" id="tw" name="housetype" value="tw" />
+				  <label for="tw">Townhouse/Condo</label>
+				</div>
+			      </fieldset>
+				
+		    </li>
+		    <li class="feature-2">
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+
+			<fieldset>
+				<legend>Square Feet</legend>
+				<input name="sqft" id="sqft" type="number" min="640" max="5600" value = "2500" required />
+			      </fieldset>
+			      <fieldset>
+				<legend>Number of Bathrooms</legend>
+				<input
+				  name="baths"
+				  id="baths"
+				  type="number"
+				  step="0.5"
+				  min="1.0"
+				  max="4.5"
+				       value = "3.5"
+				       required
+				/>
+			      </fieldset>
+			      <fieldset>
+				<legend>Year Built</legend>
+				<input name="built" id="built" type="number" min="1962" max="2006" value = "1998" required />
+			      </fieldset>
+			      <fieldset>
+				<legend>Lot Size (in Acres)</legend>
+				<input
+				  name="lot"
+				  id="lot"
+				  type="number"
+				  step="0.01"
+				  min="0"
+				  max="1.50"
+				       value = "0.11"
+				       required
+				/>
+			      </fieldset>
+			    
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    
+			    <!-- Add this element -->
+      <fieldset>
+        <legend>Predicted value</legend>
+        <input name="z" />
+      </fieldset>
+			    
+	<button type="button" onclick="getPrice()">
+        Predict My Home's Value
+      </button>    
+      <!-- <button type="button" class="featuresAshburnButton-1" "onclick="getPrice()">
+        Predict My Home's Value
+      </button>
+-->
+			
+			</li>
+		    <li class="feature-3">
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			
+			<fieldset>
+				<legend>Number of Garages</legend>
+				<div>
+				  <input type="radio" id="0" name="gar" value="0" checked="checked" />
+				  <label for="a">0</label>
+				</div>
+				<div>
+				  <input type="radio" id="1" name="gar" value="1" />
+				  <label for="b">1</label>
+				</div>
+				<div>
+				  <input type="radio" id="2" name="gar" value="2" />
+				  <label for="c">2</label>
+				</div>
+				<div>
+				  <input type="radio" id="3" name="gar" value="3" />
+				  <label for="d">3</label>
+				</div>
+			      </fieldset>	
+			
+			</li>
+		    <div class="clear"></div>
+		</ul>
+	    </div>
+	</div>  
+	  
+	  
+    </form>
+			<!-- <a href="#" class="button-2">Get Started</a> -->
+
+
+	<footer>
+		<div class="wrapper">
+			<div id="footer-info">
+				<p>Copyright 2020 Daniel Eisert. All rights reserved.</p>
+				<p><a href="#">Terms of Service</a> I <a href="#">Privacy</a></p>
+			</div>
+			<div id="footer-links">
+				<ul>
+					<!-- <li><h5>Company</h5></li> -->
+					<li><a href="https://dte324.github.io/Loudoun-Real-Estate/index.html">Home</a></li>
+					<li><a href="https://dte324.github.io/Loudoun-Real-Estate/index.html">Price Calculator</a></li>
+					<li><a href="https://dte324.github.io/Loudoun-Real-Estate/about.html">About</a></li>
+					<li><a href="uploads/ReportBlank.pdf" target="_blank">Report</a></li>
+				</ul>
+				<!-- Middle Comment
+				<ul>
+					<li><h5>Company</h5></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Meet The Team</a></li>
+					<li><a href="#">What We Do</a></li>
+					<li><a href="#">Careers</a></li>
+				</ul>
+				-->
+				<!-- Far Right Comment
+				<ul>
+					<li><h5>Company</h5></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Meet The Team</a></li>
+					<li><a href="#">What We Do</a></li>
+					<li><a href="#">Careers</a></li>
+				</ul>
+				-->
+			</div>
+			<div class="clear"></div>
+		</div>
+	</footer>
+	 
+	 
+     
+  </body>
+</html> 
+ 
+ 
