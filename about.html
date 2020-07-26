@@ -48,7 +48,7 @@
 				    <br>
 				    <br>
 				    <h4>Obtaining & Processing the Data</h4>
-				    The project began as a simple regression project. I began by using Python's 
+				    <p style="text-align:left;"> The project began as a simple regression project. I began by using Python's 
 				    <a href="https://pypi.org/project/beautifulsoup4/">Beautiful Soup</a> library to web scrape home listings off of a real
 				    estate listings website. I initially began web scraping previously sold houses in Ashburn, Virginia, but subsequently decided that
 				    the project's scope was too small, so I decided to expand my dataset to include recently sold houses in Sterling and Leesburg, Virginia.
@@ -61,87 +61,40 @@
 				    sense as several Loudoun neighborhoods have been redistricted several times over the past decade, but in order for my analysis to be accurate,
 				    all of this needed to be corrected. A significant chunk of time was dedicated to cleaning the data and preparing it for model building.
 				<br>
-				    <br>	    
+				    <br>
+				</p>
 				<h4>Model Building</h4>
-				    
-				    
-				    I did not initially intend to build this website. I was planning to apply my skills
-				    in web scraping and regression to predict housing prices in a particular town. 
-				    <br>
-				    <br>
-				    This project is larger than any other project I have completed thus far in my college career. I have spent signficant sums of
-				    time and effort putting this together, but it is something I am proud of and I enjoyed doing.
-				    
-				    
-				    Regression model building is an extremely powerful tool; however, with great power comes great responsibility. These models aren't
-				an exact science. This process can be compared to the writing process. It can take a while to sequence your ideas, organize,
-				draft, and revise. This is an iterative process which can take a while, and this can be said for supervised modeling building
-				as well. <br> <br>
-			
-				The process begins by attempting to gather possible predictor variables. Consider the attributes which impact the price
-				that a home sells for. Some of these could include number of bedrooms, number of bathrooms, and square feet. Undoubtably, there are
-				certainly more factors than these three. Would a 1000 square foot apartment with 2 bedrooms cost the same in New York City and 
-				Chicken, Alaska (a small remote town in Alaska with less than 100 people)? Probably not. This is why three different models were
-				constructed for Ashburn, Sterling, and Leesburg. Despite being nearby towns, there remains a large variability in home prices.
-				Homes of the same size and characteristics can sell at very different prices if they are in different locations. This is only
-				the tip of the iceberg. 
-				
-				<br> <br>
-				When you decide to place your home on the market, an appraiser would likely give you a price that they think your house is worth.
-				They often do this by looking at nearby houses that are representative of your house in both size and condition.
-				However, a computer can't go around your neighborhood and do this like a person can. This is where model building comes into play.
-				The model looks at many houses in your area and uses this information to give an informed guess on what your house could sell for. Model 
-				building can be applied to many areas other than real estate. For example, one could construct a model to predict how changes in advertising
-				spending impacts revenue. Similarly, one could predict the lifespan of asphalt on a highway based on its thickness, quality, and composition.
-				The possibilities are endless!
+				    <p style="text-align:left;">
+					Once the data was cleansed, I was ready to move into the model building phase. I transitioned from Python to R, as I prefer 
+					    R's regression functions and output. I began by trying to construct a single model for all 500+ observations from each of the
+					    three towns. After several attempts and countless hours, I decided to construct three seperate models (one for each town)
+					    as opposed to one large model. This is not what I originally intended to do; however, I wanted to produce the highest
+					    quality deliverable I could. In this case, the three individual models had higher accuracy and higher predicting power
+					    compared to the one larger model, so I decided to continue with three seperate models. 
 				</p>
-				<h3>Does This Always Work?</h3>
-				<p style="text-align:left;"> The short answer is no. Model building isn't an exact science, and it can be very challenging at times. Sometimes, the data can
-				be mathematically transformed to provide a better fit, but other times it simply won't work. Oftentimes, a major reason of this
-				has to do with the quality of the predictor variables. The variability of the response variable may not be fully accounted for.
-				In the case of this project, it is almost impossible to accurately predict the price of every single house in the eastern half of
-					Loudoun County. Most houses in major subdivisions are easy to predict since there are many other homes in the area which
-					are representative of them. In the case of smaller developments with large, extravagant houses, the margin of error
-					is much greater. If you think the prediction of your home price is off, ask yourself if your house is representative
-					of other houses in the area. Maybe your house is on a significantly larger lot or the house is a unique historic house in
-					Downtown Leesburg. Whatever the reason is, one must always remember that regression models aren't an exact science, but
-					they do their best to capture the most amount of variability within the response variable.
+				<h4>Reporting</h4>
+				<p style="text-align:left;">
+					Lastly, I decided that I would produce a small write-up on the project as a whole. However, before I started this phase,
+					I decided that it would be neat to create a small website where users can input characteristics about their house and view
+					a predicted house price. They would be able to use my regression model to deliver insights about their own home. The only problem
+					was that I've never created a website before. I learned some primitive HTML for roughly a week in the seventh grade, but that could
+					only get me so far. 
+					<br> <br>
+					I began by trying to make the form for users to input information about their house. I started looking around online for a way to do
+					this. I stumbled across JavaScript forms, so that's what I used. I had never used JavaScript before, so it took some time to 
+					learn. I began by following a template to make a simple calculator and looking at lots of old questions on StackOverflow.
+					Eventually, I got the form up and running.
+					<br><br>
+					I've always believed that you are going to do something, you shoud do it right. I didn't want to have spent a significant amount of
+					time on this project only to have a website that looked like it was developed in 1990, so I found a template online and learned
+					how to alter it to my needs. I learned about CSS files, and how they can be used to style my website. With time, I ended up
+					with the finished product you see today. This project has taught me alot, and I hope you are able to enjoy it.
 				</p>
+				    
+				  
 			</article>
 		</div>
 	</div>
-	
-	
-	<!-- Secondary Content Comment 
-	<div id="secondary-content">
-		<div class="wrapper">
-			<article style="background-image: url('images/article-image-1.jpg');">
-				<div class="overlay">
-					<h4>Secondary Content</h4>
-					<p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod leo a nibh dignissim tincidunt nam.</small></p>
-					<a href="#" class="more-link">View more</a>
-				</div>
-			</article>
-			<article style="background-image: url('images/article-image-2.jpg');">
-				<div class="overlay">
-					<h4>Secondary Content</h4>
-					<p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod leo a nibh dignissim tincidunt nam.</small></p>
-					<a href="#" class="more-link">View more</a>
-				</div>
-			</article><div class="clear"></div>
-		</div>
-	</div>
-	-->
-	
-	<!-- Heard Enough Comment
-	<div id="cta">
-		<div class="wrapper">
-			<h3>Heard Enough?</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod leo a nibh dignissim tincidunt. Nam ultricies odio ac neque suscipit volutpat. Ut dictum adipiscing felis sed malesuada. Integer porta sem nec nibh hendrerit imperdiet. </p>
-			<a href="#" class="button-2">Get Started</a>
-		</div>
-	</div>
-	-->	
 
 
 	<footer>
