@@ -40,6 +40,11 @@
             var houseVal = document.forms[0].housetype[i].value;
           }
         }
+	for (i = 0; i < document.forms[0].neigh.length; i++) {
+          if (document.forms[0].neigh[i].checked) {
+            var neighVal = document.forms[0].neigh[i].value;
+          }
+        }
 		  
 		if (zipVal == "47") {
 			if (garageVal == "2") {
@@ -342,7 +347,23 @@
 				  <input type="radio" id="3" name="gar" value="3" />
 				  <label for="d">3</label>
 				</div>
-			      </fieldset>	
+			      </fieldset>
+			    
+			<fieldset>
+				<legend>Neighborhood</legend>
+				<div>
+				  <input type="radio" id="oneLoudoun" name="neigh" value="oneLoudoun" checked="checked" />
+				  <label for="oneLoudoun">One Loudoun</label>
+				</div>
+				<div>
+				  <input type="radio" id="willowsford" name="neigh" value="willowsford" />
+				  <label for="willowsford">Willowsford</label>
+				</div>
+				<div>
+				  <input type="radio" id="other" name="neigh" value="other" />
+				  <label for="other">Other</label>
+				</div>
+			      </fieldset>
 			
 			</li>
 		    <div class="clear"></div>
