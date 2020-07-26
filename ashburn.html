@@ -25,11 +25,7 @@
         var bathsVal = parseFloat(form.elements["baths"].value);
         var builtVal = parseInt(form.elements["built"].value);
         var lotVal = parseFloat(form.elements["lot"].value);
-        /*for (i = 0; i < document.forms[0].zipcode.length; i++) {
-          if (document.forms[0].zipcode[i].checked) {
-            var zipVal = parseInt(document.forms[0].zipcode[i].value);
-          }
-        }*/
+
         for (i = 0; i < document.forms[0].gar.length; i++) {
           if (document.forms[0].gar[i].checked) {
             var garageVal = parseInt(document.forms[0].gar[i].value);
@@ -221,7 +217,7 @@
 			    
 	<button type="button" onclick="getPrice()">
         Predict My Home's Value
-      </button>    
+      </button>       
       <!-- <button type="button" class="featuresAshburnButton-1" "onclick="getPrice()">
         Predict My Home's Value
       </button>
@@ -262,8 +258,6 @@
 				</div>
 			      </fieldset>
 			    
-			
-			
 			</li>
 		    <div class="clear"></div>
 		</ul>
