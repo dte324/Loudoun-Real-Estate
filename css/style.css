@@ -519,3 +519,17 @@ footer {
 	background-color: #02b8dd;
 	color: #fff;
 }
+
+
+/*Explain Image*/
+
+#explain-image {
+	height: 348px;
+	padding-top: 1px;
+	background: #e8eced url('../images/Mooreland7_title.jpg') no-repeat center;
+}
+
+#explain-image h2 {
+	margin: 130px 0 40px 0;
+	color: white;
+}
