@@ -533,3 +533,17 @@ footer {
 	margin: 130px 0 40px 0;
 	color: white;
 }
+
+
+/*About Image*/
+
+#about-image {
+	height: 348px;
+	padding-top: 1px;
+	background: #e8eced url('../images/Mooreland1_title.jpg') no-repeat center;
+}
+
+#about-image h2 {
+	margin: 130px 0 40px 0;
+	color: white;
+}
