@@ -25,11 +25,11 @@
         var bathsVal = parseFloat(form.elements["baths"].value);
         var builtVal = parseInt(form.elements["built"].value);
         var lotVal = parseFloat(form.elements["lot"].value);
-        for (i = 0; i < document.forms[0].zipcode.length; i++) {
+        /*for (i = 0; i < document.forms[0].zipcode.length; i++) {
           if (document.forms[0].zipcode[i].checked) {
             var zipVal = parseInt(document.forms[0].zipcode[i].value);
           }
-        }
+        }*/
         for (i = 0; i < document.forms[0].gar.length; i++) {
           if (document.forms[0].gar[i].checked) {
             var garageVal = parseInt(document.forms[0].gar[i].value);
@@ -45,129 +45,38 @@
             var neighVal = document.forms[0].neigh[i].value;
           }
         }
-		  
-		if (zipVal == "47") {
-			if (garageVal == "2") {
-				if (houseVal == "sf") {
-					out.value = Math.round( -6932000 +
-						221400 * Math.log(sqftVal) +
-						637.2 * Math.exp(bathsVal) +
-						51640 +
-						2868 * builtVal +
-						159100 * lotVal); 
-				}
-				else { //townhouse
-					out.value = Math.round( -6932000 +
-						221400 * Math.log(sqftVal) +
-						637.2 * Math.exp(bathsVal) +
-						51640 -
-						65850 +
-						2868 * builtVal +
-						159100 * lotVal); 
-				}
-			}
-			else if (garageVal == "3") { //garage == 3
-				if (houseVal == "sf") {
-					out.value = Math.round( -6932000 +
-						221400 * Math.log(sqftVal) +
-						637.2 * Math.exp(bathsVal) +
-						139600 +
-						2868 * builtVal +
-						159100 * lotVal); 
-				}
-				else { //townhouse
-					out.value = Math.round( -6932000 +
-						221400 * Math.log(sqftVal) +
-						637.2 * Math.exp(bathsVal) +
-						139600 -
-						65850 +
-						2868 * builtVal +
-						159100 * lotVal);  
-				}
-			}
-			else {
-				if (houseVal == "sf") {
-					out.value = Math.round( -6932000 +
-						221400 * Math.log(sqftVal) +
-						637.2 * Math.exp(bathsVal) +
-						2868 * builtVal +
-						159100 * lotVal); 
-				}
-				else { //townhouse
-					out.value = Math.round( -6932000 +
-						221400 * Math.log(sqftVal) +
-						637.2 * Math.exp(bathsVal) -
-						65850 +
-						2868 * builtVal +
-						159100 * lotVal); 
-				}
-			}
-		}
-		else { //zip == 20148
-			if (garageVal == "2") {
-				if (houseVal == "sf") {
-					out.value = Math.round( -6932000 +
-						221400 * Math.log(sqftVal) +
-						637.2 * Math.exp(bathsVal) +
-						51640 +
-						2868 * builtVal +
-						159100 * lotVal -
-						27070); 
-				}
-				else { //townhouse
-					out.value = Math.round( -6932000 +
-						221400 * Math.log(sqftVal) +
-						637.2 * Math.exp(bathsVal) +
-						51640 -
-						65850 +
-						2868 * builtVal +
-						159100 * lotVal -
-						27070); 
-				}
-			}
-			else if (garageVal == "3") { //garage == 3
-				if (houseVal == "sf") {
-					out.value = Math.round( -6932000 +
-						221400 * Math.log(sqftVal) +
-						637.2 * Math.exp(bathsVal) +
-						139600 +
-						2868 * builtVal +
-						159100 * lotVal -
-						27070); 
-				}
-				else { //townhouse
-					out.value = Math.round( -6932000 +
-						221400 * Math.log(sqftVal) +
-						637.2 * Math.exp(bathsVal) +
-						139600 -
-						65850 +
-						2868 * builtVal +
-						159100 * lotVal -
-						27070); 
-				}
-			}
-			else {
-				if (houseVal == "sf") {
-					out.value = Math.round( -6932000 +
-						221400 * Math.log(sqftVal) +
-						637.2 * Math.exp(bathsVal) +
-						2868 * builtVal +
-						159100 * lotVal-
-						27070); 
-				}
-				else { //townhouse
-					out.value = Math.round( -6932000 +
-						221400 * Math.log(sqftVal) +
-						637.2 * Math.exp(bathsVal) -
-						65850 +
-						2868 * builtVal +
-						159100 * lotVal-
-						27070); 
-				}
-			}
-		}
+	      
+	      
+	      	tempNum = -4309000.0 
+			+ 215200 * Math.log(sqftVal) 
+			+ 162300 * logVal
+	      		+ 526.2 * Math.exp(bathsVal)
+	      		+ 1576 * builtVal;
+	      
+	      if (garageVal == "2") {
+		      tempNum = tempNum + 55830;
+	      }
+	      else if (garageVal == "3") {
+		      tempNum = tempNum + 105000;
+	      }
+	      
+	      if (houseVal == "tw") {
+		      tempNum = tempNum - 64780;
+	      }
+	      
+	      if (neighVal == "willowsford") {
+		      tempNum = tempNum + 102000;
+	      }
+	      else if (neighVal == "oneLoudoun") {
+		      tempNum = tempNum + 40210;
+	      }
+	      
+	      out.value = Math.round(tempNum);
+	      	
 		  
       }
+	
+	
     </script>
   </head>
   <body>
@@ -216,18 +125,6 @@
 			<form id="calc">
 
 			      <fieldset>
-				<legend>ZIP Code</legend>
-				<div>
-				  <input type="radio" id="47" name="zipcode" value="47" checked="checked" />
-				  <label for="47">20147</label>
-				</div>
-				<div>
-				  <input type="radio" id="48" name="zipcode" value="48" />
-				  <label for="48">20148</label>
-				</div>
-			      </fieldset>
-				<p> </p>
-			      <fieldset>
 				<legend>House Type</legend>
 				<div>
 				  <input type="radio" id="sf" name="housetype" value="sf" checked="checked" />
@@ -236,6 +133,22 @@
 				<div>
 				  <input type="radio" id="tw" name="housetype" value="tw" />
 				  <label for="tw">Townhouse/Condo</label>
+				</div>
+			      </fieldset>
+				<p> </p>
+				<fieldset>
+				<legend>Neighborhood</legend>
+				<div>
+				  <input type="radio" id="oneLoudoun" name="neigh" value="oneLoudoun"  />
+				  <label for="oneLoudoun">One Loudoun</label>
+				</div>
+				<div>
+				  <input type="radio" id="willowsford" name="neigh" value="willowsford" />
+				  <label for="willowsford">Willowsford</label>
+				</div>
+				<div>
+				  <input type="radio" id="other" name="neigh" value="other" checked="checked" />
+				  <label for="other">Other</label>
 				</div>
 			      </fieldset>
 				
@@ -349,21 +262,7 @@
 				</div>
 			      </fieldset>
 			    
-			<fieldset>
-				<legend>Neighborhood</legend>
-				<div>
-				  <input type="radio" id="oneLoudoun" name="neigh" value="oneLoudoun" checked="checked" />
-				  <label for="oneLoudoun">One Loudoun</label>
-				</div>
-				<div>
-				  <input type="radio" id="willowsford" name="neigh" value="willowsford" />
-				  <label for="willowsford">Willowsford</label>
-				</div>
-				<div>
-				  <input type="radio" id="other" name="neigh" value="other" />
-				  <label for="other">Other</label>
-				</div>
-			      </fieldset>
+			
 			
 			</li>
 		    <div class="clear"></div>
