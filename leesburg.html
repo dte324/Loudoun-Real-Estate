@@ -48,34 +48,40 @@
           }
         }
 	      
-	/*      
+	      
 	      
 	      tempNum = 8.87688
-		      + 0.51218 * Math.log(sqftVal)
+		      + 0.51218 * Math.log(sqftVal);
 	      
-	    tempNum = -4309000.0 
-            + 215200 * Math.log(sqftVal) 
-            + 162300 * lotVal
-                + 526.2 * Math.exp(bathsVal)
-                + 1576 * builtVal;
-          
-          if (garageVal == "2") {
-              tempNum = tempNum + 55830;
+	      if (bedsVal == "3") {
+		      tempNum = tempNum + 0.25196;
+	      }
+	      else if (bedsVal == "4") {
+		      tempNum = tempNum + 0.25126;
+	      }
+	      else if (bedsVal == "5" || bedsVal == "6") {
+		      tempNum = tempNum + 0.20091;
+	      }
+	      
+	      if (houseVal == "tw") {
+              	tempNum = tempNum - 0.13410;
+              }
+	      
+	      if (luckettsVal == "yes") {
+		      tempNum = tempNum - 0.22148;
+	      }
+	     
+	      if (zipVal == "76") {
+		      tempNum = tempNum + 0.05815;
+	      }
+	      
+	  if (garageVal == "2") {
+            	tempNum = tempNum + 0.10028;
           }
           else if (garageVal == "3") {
-              tempNum = tempNum + 105000;
-          }
-          
-          if (houseVal == "tw") {
-              tempNum = tempNum - 64780;
-          }
-          
-          if (neighVal == "w") {
-              tempNum = tempNum + 102000;
-          }
-          else if (neighVal == "o") {
-              tempNum = tempNum + 40210;
-          }
+              	tempNum = tempNum + 0.13204;
+          } 
+	      
           
           out.value = "$" + Math.round( Math.exp(tempNum));
             
@@ -83,7 +89,7 @@
       }
       
       
-      */
+      
     </script>
   </head>
   <body>
