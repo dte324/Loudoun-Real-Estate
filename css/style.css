@@ -547,3 +547,17 @@ footer {
 	margin: 130px 0 40px 0;
 	color: white;
 }
+
+
+/*Construction Image*/
+
+#temp-image {
+	height: 348px;
+	padding-top: 1px;
+	background: #e8eced url('../images/495.jpg') no-repeat center;
+}
+
+#temp-image h2 {
+	margin: 130px 0 40px 0;
+	color: white;
+}
