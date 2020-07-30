@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+ <html> 
+	  
+	 
+ <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <title>Leesburg, Virginia</title>
+     <!--[if lt IE 9]>
+     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]--> 
+     <link rel="stylesheet" type="text/css" href="css/reset.css">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+ <!-- <h1>Eastern Loudoun Home Prices Calculator</h1> -->
+ <style type="text/css">
+</style>
+<!-- <title>Eastern Loudoun Home Prices Calculator</title> -->
+<meta charset="UTF-8" />
+<script type="text/javascript">
+      function getPrice() {
+        var form = document.getElementById("calc");
+        var out = form.elements["z"];
+        //get numbers
+        var sqftVal = parseInt(form.elements["sqft"].value);
+        for (i = 0; i < document.forms[0].zipcode.length; i++) {
+          if (document.forms[0].zipcode[i].checked) {
+            var zipVal = parseInt(document.forms[0].zipcode[i].value);
+          }
+        }
+        for (i = 0; i < document.forms[0].gar.length; i++) {
+          if (document.forms[0].gar[i].checked) {
+            var garageVal = parseInt(document.forms[0].gar[i].value);
+          }
+        }
+        for (i = 0; i < document.forms[0].housetype.length; i++) {
+          if (document.forms[0].housetype[i].checked) {
+            var houseVal = document.forms[0].housetype[i].value;
+          }
+        }
+	for (i = 0; i < document.forms[0].beds.length; i++) {
+          if (document.forms[0].beds[i].checked) {
+            var bedsVal = document.forms[0].beds[i].value;
+          }
+        }
+	for (i = 0; i < document.forms[0].lucketts.length; i++) {
+          if (document.forms[0].lucketts[i].checked) {
+            var luckettsVal = document.forms[0].lucketts[i].value;
+          }
+        }
+	      
+	      
+	      
+	      tempNum = 8.87688
+		      + 0.51218 * Math.log(sqftVal);
+	      
+	      if (bedsVal == "3") {
+		      tempNum = tempNum + 0.25196;
+	      }
+	      else if (bedsVal == "4") {
+		      tempNum = tempNum + 0.25126;
+	      }
+	      else if (bedsVal == "5" || bedsVal == "6") {
+		      tempNum = tempNum + 0.20091;
+	      }
+	      
+	      if (houseVal == "tw") {
+              	tempNum = tempNum - 0.13410;
+              }
+	      
+	      if (luckettsVal == "yes") {
+		      tempNum = tempNum - 0.22148;
+	      }
+	     
+	      if (zipVal == "76") {
+		      tempNum = tempNum + 0.05815;
+	      }
+	      
+	  if (garageVal == "2") {
+            	tempNum = tempNum + 0.10028;
+          }
+          else if (garageVal == "3") {
+              	tempNum = tempNum + 0.13204;
+          } 
+	      
+          
+          out.value = "$" + Math.round( Math.exp(tempNum));
+            
+          
+      }
+      
+      
+      
+    </script>
+  </head>
+  <body>
+	  
+	  
+	  <header>
+		<div class="wrapper">
+			 <h1>Loudoun Price Calculator<span class="color"></span></h1>
+			<nav>
+				<ul>
+					<li><a href="https://dte324.github.io/Loudoun-Real-Estate/index.html">Home</a></li>
+					<li><a href="https://dte324.github.io/Loudoun-Real-Estate/homeValue.html">Home Value</a></li>
+					<li><a href="https://dte324.github.io/Loudoun-Real-Estate/about.html">About</a></li>
+					<li><a href="uploads/ReportBlank.pdf" target="_blank">Report</a></li>
+				</ul>
+			</nav>
+ 		</div>
+ 	</header>
+
+ 	<div id="leesburg-image">
+ 		<div class="wrapper">
+ 			<h2><strong>Leesburg, Virginia</strong></h2>
+ 			<!-- <a href="#homeValue" class="button-1">Get Started</a> -->
+ 		</div>
+ 	</div>
+
+	<div id="featuresLeesburg">
+		<h3>Find Out What Your Home is Worth</h3>
+		<font color = "#A52A2A"> <center> Note: Do not leave any question blank in order to receive an accurate prediction. </center> </font>
+	    <div class="wrapper">
+		<ul>
+		    <li class="feature-1">
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+
+			<form id="calc">
+
+			      <fieldset>
+				<legend>ZIP Code</legend>
+				<div>
+				  <input type="radio" id="75" name="zipcode" value="75" checked="checked" />
+				  <label for="75">20175</label>
+				</div>
+				<div>
+				  <input type="radio" id="76" name="zipcode" value="76" />
+				  <label for="76">20176</label>
+				</div>
+			      </fieldset>
+				<p> </p>
+			      <fieldset>
+				<legend>House Type</legend>
+				<div>
+				  <input type="radio" id="sf" name="housetype" value="sf" checked="checked" />
+				  <label for="sf">Single Family</label>
+				</div>
+				<div>
+				  <input type="radio" id="tw" name="housetype" value="tw" />
+				  <label for="tw">Townhouse/Condo</label>
+				</div>
+			      </fieldset>
+				
+		    </li>
+		    <li class="feature-2">
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+
+			<fieldset>
+				<legend>Square Feet</legend>
+				<input name="sqft" id="sqft" type="number" min="792" max="8500" value = "2500" required />
+			      </fieldset>
+
+			    <fieldset>
+				<legend>Number of Garages</legend>
+				<div>
+				  <input type="radio" id="0" name="gar" value="0" checked="checked" />
+				  <label for="a">0</label>
+				</div>
+				<div>
+				  <input type="radio" id="1" name="gar" value="1" />
+				  <label for="b">1</label>
+				</div>
+				<div>
+				  <input type="radio" id="2" name="gar" value="2" />
+				  <label for="c">2</label>
+				</div>
+				<div>
+				  <input type="radio" id="3" name="gar" value="3" />
+				  <label for="d">3</label>
+				</div>
+			      </fieldset>	
+			      
+			    
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    
+			    <!-- Add this element -->
+      <fieldset>
+        <legend>A typical Leesburg home with these characteristics is roughly worth</legend>
+        <input name="z" />
+      </fieldset>
+			    
+	<button type="button" onclick="getPrice()">
+        Predict My Home's Value
+      </button>      
+      <!-- <button type="button" class="featuresAshburnButton-1" "onclick="getPrice()">
+        Predict My Home's Value
+      </button>
+-->
+			
+			</li>
+		    <li class="feature-3">
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    <p> </p>
+			    
+			<fieldset>
+				<legend>Lucketts Area?</legend>
+				<div>
+				  <input type="radio" id="yes" name="lucketts" value="yes" checked="checked" />
+				  <label for="yes">Yes</label>
+				</div>
+				<div>
+				  <input type="radio" id="no" name="lucketts" value="no" />
+				  <label for="no">No</label>
+				</div>
+			      </fieldset>
+				<p> </p>
+			
+			<fieldset>
+				<legend>Number of Bedrooms</legend>
+				<div>
+				  <input type="radio" id="1" name="beds" value="1" checked="checked" />
+				  <label for="1">1</label>
+				</div>
+				<div>
+				  <input type="radio" id="2" name="beds" value="2" />
+				  <label for="2">2</label>
+				</div>
+				<div>
+				  <input type="radio" id="3" name="beds" value="3" />
+				  <label for="3">3</label>
+				</div>
+				<div>
+				  <input type="radio" id="4" name="beds" value="4" />
+				  <label for="4">4</label>
+				</div>
+				<div>
+				  <input type="radio" id="5" name="beds" value="5" />
+				  <label for="5">5</label>
+				</div>
+				<div>
+				  <input type="radio" id="6" name="beds" value="6" />
+				  <label for="6">6</label>
+				</div>
+			      </fieldset>	
+			
+			</li>
+		    <div class="clear"></div>
+		</ul>
+	    </div>
+	</div>  
+	  
+	  
+    </form>
+			<!-- <a href="#" class="button-2">Get Started</a> -->
+	 
+	 
+	 <div id="cta">
+		<div class="wrapper">
+			<h3>How Did We Predict This?</h3>
+			<p>Data from other similar houses in your area were used to predict the price of your house by identifying a few variables which capture the variability in home prices. This was done by looking at the relationship between predictor variables (e.g., square feet, bathrooms, etc.) and home price, the response variable. A large sample size was gathered to account for representative homes of the area, but of course, there will always be exceptions and some degree of bias. Regression model building isn't an exact science, so there will always be a margin of error induced in these predictions. The less representative your house is compared to other houses in the area, the larger one could expect this margin of error to be. </p>
+			<a href="https://dte324.github.io/Loudoun-Real-Estate/explain.html" class="button-2">Learn More</a>
+		</div>
+	</div>
+
+
+	<footer>
+		<div class="wrapper">
+			<div id="footer-info">
+				<p>Copyright 2020 Daniel Eisert. All rights reserved.</p>
+				<p><a href="#">Terms of Service</a> I <a href="#">Privacy</a></p>
+			</div>
+			<div id="footer-links">
+				<ul>
+					<!-- <li><h5>Company</h5></li> -->
+					<li><a href="https://dte324.github.io/Loudoun-Real-Estate/index.html">Home</a></li>
+					<li><a href="https://dte324.github.io/Loudoun-Real-Estate/homeValue.html">Price Calculator</a></li>
+					<li><a href="https://dte324.github.io/Loudoun-Real-Estate/about.html">About</a></li>
+					<li><a href="uploads/ReportBlank.pdf" target="_blank">Report</a></li>
+				</ul>
+				<!-- Middle Comment
+				<ul>
+					<li><h5>Company</h5></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Meet The Team</a></li>
+					<li><a href="#">What We Do</a></li>
+					<li><a href="#">Careers</a></li>
+				</ul>
+				-->
+				<!-- Far Right Comment
+				<ul>
+					<li><h5>Company</h5></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Meet The Team</a></li>
+					<li><a href="#">What We Do</a></li>
+					<li><a href="#">Careers</a></li>
+				</ul>
+				-->
+			</div>
+			<div class="clear"></div>
+		</div>
+	</footer>
+	 
+	 
+     
+  </body>
+</html> 
+ 
+ 
